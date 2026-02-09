@@ -91,9 +91,13 @@ img {
 	align-items: center;
 	justify-content: space-between;
 	padding: 1.2rem 0;
+	position: relative;
 }
 
 .poppyrose-logo {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
@@ -140,7 +144,7 @@ img {
 }
 
 .poppyrose-hero {
-	background: linear-gradient(135deg, var(--poppyrose-primary-300), var(--poppyrose-white));
+	background: linear-gradient(135deg, rgba(255, 255, 255, 0.96), var(--poppyrose-primary-100));
 	padding: 5.5rem 0 4.5rem;
 }
 
@@ -155,10 +159,11 @@ img {
 	font-size: clamp(2.4rem, 3vw, 3.6rem);
 	margin: 0 0 1rem;
 	color: var(--poppyrose-primary-900);
+	text-shadow: 0 6px 18px rgba(31, 27, 28, 0.12);
 }
 
 .poppyrose-hero p {
-	color: var(--poppyrose-muted);
+	color: var(--poppyrose-ink);
 	font-size: 1.05rem;
 	margin-bottom: 2rem;
 }
