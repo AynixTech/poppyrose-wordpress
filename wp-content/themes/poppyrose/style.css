@@ -93,10 +93,21 @@ img {
 }
 
 .poppyrose-logo {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
 	font-size: 1.5rem;
 	font-weight: 700;
 	color: var(--poppyrose-primary-900);
 	letter-spacing: 0.04em;
+}
+
+.poppyrose-logo-img {
+	width: 140px;
+	height: auto;
+	display: block;
+	object-fit: contain;
 }
 
 .poppyrose-nav {

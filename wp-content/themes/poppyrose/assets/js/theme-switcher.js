@@ -27,6 +27,15 @@
     Object.entries(palette).forEach(([key, value]) => {
       root.style.setProperty(key, value);
     });
+
+    const logo = document.querySelector('.poppyrose-logo-img');
+    if (logo) {
+      const logoSrc = logo.dataset[`logo${name.charAt(0).toUpperCase()}${name.slice(1)}`];
+      if (logoSrc) {
+        logo.src = logoSrc;
+      }
+    }
+
     localStorage.setItem('poppyrose-palette', name);
   }
 

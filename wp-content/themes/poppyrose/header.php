@@ -11,7 +11,14 @@
 <header class="poppyrose-header">
   <div class="poppyrose-container poppyrose-header-inner">
     <a class="poppyrose-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-      <?php bloginfo( 'name' ); ?>
+      <img
+        class="poppyrose-logo-img"
+        src="<?php echo esc_url( get_template_directory_uri() . '/assets/logos/logo-red.svg' ); ?>"
+        data-logo-red="<?php echo esc_url( get_template_directory_uri() . '/assets/logos/logo-red.svg' ); ?>"
+        data-logo-blue="<?php echo esc_url( get_template_directory_uri() . '/assets/logos/logo-blue.svg' ); ?>"
+        data-logo-gold="<?php echo esc_url( get_template_directory_uri() . '/assets/logos/logo-gold.svg' ); ?>"
+        alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>"
+      >
     </a>
     <nav class="poppyrose-nav">
       <?php
