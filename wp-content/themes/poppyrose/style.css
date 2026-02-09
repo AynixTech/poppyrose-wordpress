@@ -1,0 +1,310 @@
+/*
+Theme Name: Poppyrose
+Theme URI: https://github.com/AynixTech/poppyrose-wordpress
+Author: AynixTech
+Author URI: https://github.com/AynixTech
+Description: A modern, romantic WordPress theme with a bold hero, product cards, and elegant sections.
+Version: 1.0.0
+Text Domain: poppyrose
+*/
+
+:root {
+	--poppyrose-primary-100: #fe7fb6;
+	--poppyrose-primary-300: #ff005b;
+	--poppyrose-primary-700: #bf0413;
+	--poppyrose-primary-900: #8c0335;
+	--poppyrose-ink: #1f1b1c;
+	--poppyrose-muted: #6f5a5f;
+	--poppyrose-white: #ffffff;
+	--poppyrose-shadow: 0 18px 48px rgba(31, 27, 28, 0.12);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: "Poppins", "Helvetica Neue", Arial, sans-serif;
+	color: var(--poppyrose-ink);
+	background: var(--poppyrose-white);
+	line-height: 1.6;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+.poppyrose-container {
+	width: min(1200px, 92vw);
+	margin: 0 auto;
+}
+
+.poppyrose-button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.6rem;
+	padding: 0.95rem 2.2rem;
+	border-radius: 999px;
+	border: 1px solid transparent;
+	font-weight: 600;
+	letter-spacing: 0.02em;
+	transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+	cursor: pointer;
+}
+
+.poppyrose-button.primary {
+	background: var(--poppyrose-primary-900);
+	color: var(--poppyrose-white);
+	box-shadow: var(--poppyrose-shadow);
+}
+
+.poppyrose-button.secondary {
+	background: transparent;
+	color: var(--poppyrose-primary-900);
+	border-color: var(--poppyrose-primary-900);
+}
+
+.poppyrose-button:hover {
+	transform: translateY(-2px);
+}
+
+.poppyrose-header {
+	position: sticky;
+	top: 0;
+	z-index: 20;
+	background: rgba(255, 255, 255, 0.92);
+	backdrop-filter: blur(12px);
+	border-bottom: 1px solid rgba(122, 31, 42, 0.08);
+}
+
+.poppyrose-header-inner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1.2rem 0;
+}
+
+.poppyrose-logo {
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: var(--poppyrose-primary-900);
+	letter-spacing: 0.04em;
+}
+
+.poppyrose-nav {
+	display: flex;
+	gap: 1.6rem;
+	font-weight: 500;
+	color: var(--poppyrose-muted);
+}
+
+.poppyrose-palette {
+	display: inline-flex;
+	gap: 0.5rem;
+	align-items: center;
+}
+
+.poppyrose-swatch {
+	width: 20px;
+	height: 20px;
+	border-radius: 6px;
+	border: 1px solid rgba(31, 27, 28, 0.15);
+	cursor: pointer;
+	box-shadow: 0 6px 14px rgba(31, 27, 28, 0.12);
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.poppyrose-swatch:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 10px 18px rgba(31, 27, 28, 0.18);
+}
+
+.poppyrose-hero {
+	background: linear-gradient(135deg, var(--poppyrose-primary-300), var(--poppyrose-white));
+	padding: 5.5rem 0 4.5rem;
+}
+
+.poppyrose-hero-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	gap: 3rem;
+	align-items: center;
+}
+
+.poppyrose-hero h1 {
+	font-size: clamp(2.4rem, 3vw, 3.6rem);
+	margin: 0 0 1rem;
+	color: var(--poppyrose-primary-900);
+}
+
+.poppyrose-hero p {
+	color: var(--poppyrose-muted);
+	font-size: 1.05rem;
+	margin-bottom: 2rem;
+}
+
+.poppyrose-hero-card {
+	background: var(--poppyrose-white);
+	padding: 2.5rem;
+	border-radius: 28px;
+	box-shadow: var(--poppyrose-shadow);
+	position: relative;
+	overflow: hidden;
+}
+
+.poppyrose-hero-card::after {
+	content: "";
+	position: absolute;
+	top: -40px;
+	right: -40px;
+	width: 140px;
+	height: 140px;
+	background: var(--poppyrose-primary-100);
+	border-radius: 50%;
+	opacity: 0.8;
+}
+
+.poppyrose-highlight {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	gap: 1.4rem;
+	margin-top: 2.5rem;
+}
+
+.poppyrose-highlight-card {
+	background: var(--poppyrose-white);
+	border-radius: 20px;
+	padding: 1.6rem;
+	border: 1px solid rgba(122, 31, 42, 0.1);
+}
+
+.poppyrose-section {
+	padding: 4.5rem 0;
+}
+
+.poppyrose-section-title {
+	font-size: 2rem;
+	color: var(--poppyrose-primary-900);
+	margin-bottom: 0.6rem;
+}
+
+.poppyrose-section-subtitle {
+	color: var(--poppyrose-muted);
+	max-width: 600px;
+}
+
+.poppyrose-products {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	gap: 1.8rem;
+	margin-top: 2.5rem;
+}
+
+.poppyrose-product-card {
+	background: var(--poppyrose-white);
+	border-radius: 24px;
+	padding: 1.5rem;
+	border: 1px solid rgba(31, 27, 28, 0.08);
+	display: grid;
+	gap: 1rem;
+}
+
+.poppyrose-product-card span {
+	color: var(--poppyrose-muted);
+	font-size: 0.95rem;
+}
+
+.poppyrose-product-price {
+	font-weight: 700;
+	color: var(--poppyrose-primary-900);
+}
+
+.poppyrose-story {
+	background: var(--poppyrose-primary-100);
+	border-radius: 32px;
+	padding: 3rem;
+	display: grid;
+	gap: 1.5rem;
+}
+
+.poppyrose-steps {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	gap: 1.5rem;
+	margin-top: 2rem;
+}
+
+.poppyrose-step-card {
+	background: var(--poppyrose-white);
+	border-radius: 20px;
+	padding: 1.4rem;
+	border: 1px solid rgba(122, 31, 42, 0.08);
+}
+
+.poppyrose-testimonials {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	gap: 1.6rem;
+	margin-top: 2.4rem;
+}
+
+.poppyrose-testimonial-card {
+	background: var(--poppyrose-white);
+	border-radius: 20px;
+	padding: 1.6rem;
+	border: 1px solid rgba(31, 27, 28, 0.08);
+}
+
+.poppyrose-cta {
+	background: linear-gradient(140deg, var(--poppyrose-primary-900), #9f3642);
+	color: var(--poppyrose-white);
+	padding: 4rem 0;
+	text-align: center;
+}
+
+.poppyrose-footer {
+	background: var(--poppyrose-ink);
+	color: rgba(255, 255, 255, 0.8);
+	padding: 2.8rem 0;
+}
+
+.poppyrose-footer-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 1.5rem;
+}
+
+.poppyrose-footer h4 {
+	color: var(--poppyrose-white);
+	margin-top: 0;
+}
+
+.poppyrose-badge {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4rem;
+	padding: 0.35rem 0.8rem;
+	background: rgba(255, 0, 91, 0.12);
+	color: var(--poppyrose-primary-900);
+	border-radius: 999px;
+	font-size: 0.85rem;
+	font-weight: 600;
+}
+
+@media (max-width: 768px) {
+	.poppyrose-nav {
+		display: none;
+	}
+
+	.poppyrose-hero {
+		padding: 4rem 0 3.2rem;
+	}
+}
