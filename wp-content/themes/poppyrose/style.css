@@ -135,12 +135,26 @@ img {
 	margin: 0;
 	padding: 0;
 	display: flex;
-	gap: 1.4rem;
+	gap: 1.2rem;
+	align-items: center;
 }
 
 .poppyrose-nav-list a {
 	color: var(--poppyrose-muted);
-	font-weight: 500;
+	font-weight: 600;
+	font-size: 0.95rem;
+	letter-spacing: 0.02em;
+	padding: 0.35rem 0.6rem;
+	border-radius: 999px;
+	transition: color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+.poppyrose-nav-list a:hover,
+.poppyrose-nav-list a:focus-visible {
+	color: var(--poppyrose-primary-900);
+	background: rgba(255, 0, 91, 0.12);
+	transform: translateY(-1px);
+	outline: none;
 }
 
 .poppyrose-palette {
